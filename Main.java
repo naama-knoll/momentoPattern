@@ -6,18 +6,7 @@ import java.io.RandomAccessFile;
 public class Main {
     public static void main(String[] args) {
 
-        int x = 1, y = 0;
-        try {
-            x /= y;
-        } catch (ArithmeticException e) {
-            System.out.println(e);
-        } catch (Exception a) {
-            System.out.println(a);
-        } finally {
-            System.out.println("moaaa");
-        }
-
-
+    
         Document doc=new Document();
         History historyList=new History();
 
@@ -33,28 +22,6 @@ public class Main {
 
         System.out.println(doc);
     }
-    public static void cat(File file) {
-        RandomAccessFile input = null;
-        String line = null;
+   
 
-        try {
-            input = new RandomAccessFile(file, "r");
-            while ((line = input.readLine()) != null) {
-                System.out.println(line);
-            }
-            return;
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (input != null) {
-                try {
-                    input.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
 }
